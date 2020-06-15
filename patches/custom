@@ -2,7 +2,7 @@ Index: dwm/config.def.h
 ===================================================================
 --- dwm.orig/config.def.h
 +++ dwm/config.def.h
-@@ -17,14 +17,15 @@ static const char col_gray2[]       = "#
+@@ -22,14 +22,15 @@ static const char col_gray2[]       = "#
  static const char col_gray3[]       = "#bbbbbb";
  static const char col_gray4[]       = "#eeeeee";
  static const char col_cyan[]        = "#005577";
@@ -20,7 +20,7 @@ Index: dwm/config.def.h
  
  static const Rule rules[] = {
  	/* xprop(1):
-@@ -33,7 +34,6 @@ static const Rule rules[] = {
+@@ -38,7 +39,6 @@ static const Rule rules[] = {
  	 */
  	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
  	{ "Gimp",    NULL,     NULL,           0,         1,          0,           0,        -1 },
@@ -28,7 +28,7 @@ Index: dwm/config.def.h
  	{ "st",      NULL,     NULL,           0,         0,          1,          -1,        -1 },
  	{ NULL,      NULL,     "Event Tester", 0,         1,          0,           1,        -1 }, /* xev */
  };
-@@ -63,11 +63,13 @@ static const Layout layouts[] = {
+@@ -68,11 +68,13 @@ static const Layout layouts[] = {
  
  /* commands */
  static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
@@ -43,3 +43,16 @@ Index: dwm/config.def.h
  	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
  	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
  	{ MODKEY,                       XK_b,      togglebar,      {0} },
+Index: dwm/README
+===================================================================
+--- dwm.orig/README
++++ dwm/README
+@@ -6,6 +6,8 @@ dwm is an extremely fast, small, and dyn
+ Requirements
+ ------------
+ In order to build dwm you need the Xlib header files.
++Patches can be managed in this custom build with quilt:
++http://savannah.nongnu.org/projects/quilt
+ 
+ 
+ Installation
